@@ -5,6 +5,7 @@ body {
     background-color: #ffff;
 }
 
+/* Navbar Style */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -14,6 +15,7 @@ body {
     height: 60px;
 }
 
+/* Logo */
 .logo {
     display: flex;
     align-items: center;
@@ -22,10 +24,7 @@ body {
     font-weight: bold;
 }
 
-.logo i {
-    margin-right: 5px;
-}
-
+/* Nav Links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -51,4 +50,36 @@ body {
     border-radius: 5px;
 }
 
+/* Burger Menu Icon */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
 
+/* Responsive Style */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: -100%;
+        background-color: #ffff;
+        height: 100vh;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        transition: right 0.3s ease;
+        padding-top: 20px;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .menu-icon {
+        display: block;
+        color: #24bda6;
+    }
+}

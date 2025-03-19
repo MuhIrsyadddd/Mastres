@@ -12,6 +12,9 @@
         <div class="logo">
             <span>Mastres</span>
         </div>
+        <div class="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
         <ul class="nav-links">
             <li><a href="#" class="active">Home</a></li>
             <li><a href="#">Web Development</a></li>
@@ -22,5 +25,14 @@
         </ul>
         <div class="icons"></div>
     </nav>
+
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
